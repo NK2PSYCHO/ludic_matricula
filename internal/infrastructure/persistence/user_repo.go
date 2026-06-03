@@ -35,6 +35,6 @@ func (u *userRepo) GetUser(id uuid.UUID) (user.User, error) {
 	panic("unimplemented")
 }
 
-func (u *userRepo) GetUsers(id uuid.UUID) ([]user.User, error) {
+func (u *userRepo) GetUsers() ([]user.User, error) {
 	panic("unimplemented")
 }

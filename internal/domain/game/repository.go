@@ -7,5 +7,5 @@ type GameRepository interface {
 	UpdateGame(id uuid.UUID, game Game) error
 	DeleteGame(id uuid.UUID) error
 	GetGame(id uuid.UUID) (Game, error)
-	GetGames(id uuid.UUID) ([]Game, error)
+	GetGames() ([]Game, error)
 }

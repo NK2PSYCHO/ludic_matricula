@@ -35,6 +35,6 @@ func (g *gameRepo) GetGame(id uuid.UUID) (game.Game, error) {
 	panic("unimplemented")
 }
 
-func (g *gameRepo) GetGames(id uuid.UUID) ([]game.Game, error) {
+func (g *gameRepo) GetGames() ([]game.Game, error) {
 	panic("unimplemented")
 }

@@ -7,5 +7,5 @@ type UserRepository interface {
 	UpdateUser(id uuid.UUID, user User) error
 	DeleteUser(id uuid.UUID) error
 	GetUser(id uuid.UUID) (User, error)
-	GetUsers(id uuid.UUID) ([]User, error)
+	GetUsers() ([]User, error)
 }
