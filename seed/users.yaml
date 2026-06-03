@@ -1,0 +1,12 @@
+users:
+  - name: Alice Souza
+    email: alice@example.com
+    password: secret123
+
+  - name: Bob Lima
+    email: bob@example.com
+    password: secret456
+
+  - name: Carol Mendes
+    email: carol@example.com
+    password: secret789

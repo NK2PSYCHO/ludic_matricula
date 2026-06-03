@@ -1,0 +1,25 @@
+games:
+  - name: "The Legend of Zelda: Ocarina of Time"
+    publisher: Nintendo
+    year: "1998"
+    platform: Nintendo 64
+
+  - name: "Final Fantasy VII"
+    publisher: Square
+    year: "1997"
+    platform: PlayStation
+
+  - name: "Half-Life 2"
+    publisher: Valve
+    year: "2004"
+    platform: PC
+
+  - name: "Dark Souls"
+    publisher: FromSoftware
+    year: "2011"
+    platform: PC
+    
+  - name: "Minecraft"
+    publisher: Mojang
+    year: "2011"
+    platform: PC
