@@ -15,6 +15,7 @@ type UserSeed struct {
 	Name     string `yaml:"name"`
 	Email    string `yaml:"email"`
 	Password string `yaml:"password"`
+	Role     string `yaml:"role"`
 }
 
 type UserFile struct {
@@ -75,8 +76,8 @@ func seedUsers(db *sql.DB) {
 			log.Fatalf("hash password: %v", err)
 		}
 		_, err = db.Exec(
-			`INSERT INTO users (name, email, password_hash) VALUES ($1, $2, $3) ON CONFLICT (email) DO NOTHING`,
-			u.Name, u.Email, string(hash),
+			`INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4) ON CONFLICT (email) DO NOTHING`,
+			u.Name, u.Email, string(hash), u.Role,
 		)
 		if err != nil {
 			log.Fatalf("insert user %s: %v", u.Email, err)
