@@ -25,3 +25,14 @@ type UserDTO struct {
 	Email string    `json:"email"`
 	Role  Role      `json:"role"`
 }
+
+type CreateUserReq struct {
+	Name     string `json:"name"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
+}
+
+type UserLoginReq struct {
+	Email    string `json:"email"`
+	Password string `json:"password"`
+}
