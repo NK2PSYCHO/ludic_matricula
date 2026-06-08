@@ -11,7 +11,7 @@ type GameService interface {
 	UpdateGame(id uuid.UUID, Game Game) error
 	DeleteGame(id uuid.UUID) error
 	GetGame(id uuid.UUID) (Game, error)
-	GetGames(id uuid.UUID) ([]Game, error)
+	GetGames() ([]Game, error)
 }
 
 type gameService struct {
@@ -40,6 +40,6 @@ func (g *gameService) GetGame(id uuid.UUID) (Game, error) {
 	panic("unimplemented")
 }
 
-func (g *gameService) GetGames(id uuid.UUID) ([]Game, error) {
+func (g *gameService) GetGames() ([]Game, error) {
 	panic("unimplemented")
 }
