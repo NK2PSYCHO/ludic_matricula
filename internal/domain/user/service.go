@@ -7,11 +7,12 @@ import (
 var _ UserService = (*userService)(nil)
 
 type UserService interface {
-	AddUser(user User) error
+	AddUser(req CreateUserReq) error
 	UpdateUser(id uuid.UUID, user User) error
 	DeleteUser(id uuid.UUID) error
-	GetUser(id uuid.UUID) (User, error)
-	GetUsers(id uuid.UUID) ([]User, error)
+	GetUser(id uuid.UUID) (UserDTO, error)
+	GetUsers() ([]UserDTO, error)
+	Login(req UserLoginReq) (UserDTO, error)
 }
 
 type userService struct {
@@ -24,7 +25,7 @@ func NewUserService(repo UserRepository) *userService {
 	}
 }
 
-func (u *userService) AddUser(user User) error {
+func (u *userService) AddUser(req CreateUserReq) error {
 	panic("unimplemented")
 }
 
@@ -36,10 +37,14 @@ func (u *userService) DeleteUser(id uuid.UUID) error {
 	panic("unimplemented")
 }
 
-func (u *userService) GetUser(id uuid.UUID) (User, error) {
+func (u *userService) GetUser(id uuid.UUID) (UserDTO, error) {
 	panic("unimplemented")
 }
 
-func (u *userService) GetUsers(id uuid.UUID) ([]User, error) {
+func (u *userService) GetUsers() ([]UserDTO, error) {
+	panic("unimplemented")
+}
+
+func (u *userService) Login(req UserLoginReq) (UserDTO, error) {
 	panic("unimplemented")
 }
