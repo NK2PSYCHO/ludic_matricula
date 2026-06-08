@@ -1,0 +1,8 @@
+:80 {
+    handle /api/* {
+        reverse_proxy ludic_app:8080
+    }
+    handle {
+        reverse_proxy ludic_frontend:3000
+    }
+}
