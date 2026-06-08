@@ -2,11 +2,14 @@ users:
   - name: Alice Souza
     email: alice@example.com
     password: secret123
+    role: admin
 
   - name: Bob Lima
     email: bob@example.com
     password: secret456
+    role: user
 
   - name: Carol Mendes
     email: carol@example.com
     password: secret789
+    role: user
